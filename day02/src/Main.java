@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
     try {
         String filename = "day02/resources/inputday2.txt"; 
-        List<String> ids = Helper.readFileToListLong(filename);
+        List<String> ids = Helper.readFileToListString(filename);
 
         Long totalWrongIdsPart1 = 0L;
         Long totalWrongIdsPart2 = 0L;
