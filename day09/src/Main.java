@@ -1,5 +1,3 @@
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
@@ -20,11 +18,9 @@ public class Main {
 
             // For part 2
             boolean[][] grid = Day09Util.buildGrid(points, 100000, 100000);
-            //Day09Util.printGrid(grid);
             rectangles = Day09Util.findRectanglesPart2(points, grid);
             long answerPart2 = rectangles.get(rectangles.size() - 1).getSize();
-            //Day09Util.printGrid(grid);
-            // Output the results
+
             System.out.println("The answer for Part 2 is: " + answerPart2);
         } catch (IOException e) {
             System.err.println("Erreur lors de la lecture du fichier : " + e.getMessage());
