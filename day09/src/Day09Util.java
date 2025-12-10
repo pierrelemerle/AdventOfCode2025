@@ -123,34 +123,6 @@ public class Day09Util {
         return grid;
     }
 
-    private static boolean[][] fillInternalArea(boolean[][] grid) {
-        int height = grid.length;
-        int width = grid[0].length;
-
-        // Fill internal area
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
-                if (grid[i][j]) {
-                    j++;
-                    if (grid[i][j]) {
-                        //if we are in a zone we need to skip the whole
-                        while (grid[i][j]) {
-                            j++;
-                        }
-                    }
-                    else {
-                        //otherwise we color until the end of the zone
-                        while (!grid[i][j]) {
-                            grid[i][j] = true;   
-                            j++;
-                        }
-                    }
-                }
-            }
-        }
-        return grid;
-    }
-
     public static void printGrid(boolean[][] grid) {
         for (boolean[] row : grid) {
             for (boolean tile : row) {
